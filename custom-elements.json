@@ -4,12 +4,12 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "src/TextMonitor.ts",
+      "path": "src/TextTracker.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "TextMonitor",
+          "name": "TextTracker",
           "members": [
             {
               "kind": "field",
@@ -59,17 +59,17 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "text-monitor",
+          "tagName": "text-tracker",
           "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
-          "name": "TextMonitor",
+          "name": "TextTracker",
           "declaration": {
-            "name": "TextMonitor",
-            "module": "src/TextMonitor.ts"
+            "name": "TextTracker",
+            "module": "src/TextTracker.ts"
           }
         }
       ]
@@ -81,25 +81,25 @@
       "exports": [
         {
           "kind": "js",
-          "name": "TextMonitor",
+          "name": "TextTracker",
           "declaration": {
-            "name": "TextMonitor",
-            "module": "./TextMonitor.js"
+            "name": "TextTracker",
+            "module": "./TextTracker.js"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "src/text-monitor.ts",
+      "path": "src/text-tracker.ts",
       "declarations": [],
       "exports": [
         {
           "kind": "custom-element-definition",
-          "name": "text-monitor",
+          "name": "text-tracker",
           "declaration": {
-            "name": "TextMonitor",
-            "module": "/src/TextMonitor.js"
+            "name": "TextTracker",
+            "module": "/src/TextTracker.js"
           }
         }
       ]

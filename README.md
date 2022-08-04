@@ -1,21 +1,21 @@
-# \<text-monitor>
+# \<text-tracker>
 
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
 
 ## Installation
 
 ```bash
-npm i text-monitor
+npm i text-tracker
 ```
 
 ## Usage
 
 ```html
 <script type="module">
-  import 'text-monitor/text-monitor.js';
+  import 'text-tracker/text-tracker.js';
 </script>
 
-<text-monitor></text-monitor>
+<text-tracker></text-tracker>
 ```
 
 ## Linting and formatting

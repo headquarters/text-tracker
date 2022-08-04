@@ -1,14 +1,14 @@
 {
-  "name": "text-monitor",
-  "description": "Webcomponent text-monitor following open-wc recommendations",
+  "name": "text-tracker",
+  "description": "Webcomponent text-tracker following open-wc recommendations",
   "license": "MIT",
-  "author": "text-monitor",
+  "author": "text-tracker",
   "version": "0.0.0",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "exports": {
     ".": "./dist/src/index.js",
-    "./text-monitor.js": "./dist/src/text-monitor.js"
+    "./text-tracker.js": "./dist/src/text-tracker.js"
   },
   "scripts": {
     "analyze": "cem analyze --litelement",

@@ -1,9 +1,9 @@
 import { html, TemplateResult } from 'lit';
-import '../src/text-monitor.js';
+import '../src/text-tracker.js';
 
 export default {
-  title: 'TextMonitor',
-  component: 'text-monitor',
+  title: 'TextTracker',
+  component: 'text-tracker',
   argTypes: {
     title: { control: 'text' },
     counter: { control: 'number' },
@@ -30,13 +30,13 @@ const Template: Story<ArgTypes> = ({
   textColor,
   slot,
 }: ArgTypes) => html`
-  <text-monitor
-    style="--text-monitor-text-color: ${textColor || 'black'}"
+  <text-tracker
+    style="--text-tracker-text-color: ${textColor || 'black'}"
     .title=${title}
     .counter=${counter}
   >
     ${slot}
-  </text-monitor>
+  </text-tracker>
 `;
 
 export const Regular = Template.bind({});

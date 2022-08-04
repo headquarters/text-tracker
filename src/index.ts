@@ -1,1 +1,1 @@
-export { TextMonitor } from './TextMonitor.js';
+export { TextTracker } from './TextTracker.js';

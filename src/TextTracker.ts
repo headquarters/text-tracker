@@ -3,7 +3,7 @@ import { LitElement, html, css } from 'lit';
 import { state } from 'lit/decorators.js';
 import { finder } from '@medv/finder';
 
-export class TextMonitor extends LitElement {
+export class TextTracker extends LitElement {
   @state()
   private _selection: Selection | null;
 
