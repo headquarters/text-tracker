@@ -135,7 +135,7 @@ export class TextTracker extends LitElement {
         </details>
 
         <p>Selected text: ${this.getSelectedText()}</p>
-        <!-- <p>Focused element: </p> -->
+        <p>Focused element:</p>
 
         <button type="button" @click="${this.trackSelectedText}">Track</button>
       </div>
