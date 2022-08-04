@@ -13,43 +13,46 @@
           "members": [
             {
               "kind": "field",
-              "name": "title",
+              "name": "_selection",
               "type": {
-                "text": "string"
+                "text": "Selection | null"
               },
-              "default": "'Hey there'",
-              "attribute": "title"
+              "privacy": "private",
+              "default": "null"
             },
             {
               "kind": "field",
-              "name": "counter",
+              "name": "_selectionParentElement",
               "type": {
-                "text": "number"
+                "text": "HTMLElement | null | undefined"
               },
-              "default": "5",
-              "attribute": "counter"
+              "privacy": "private",
+              "default": "null"
+            },
+            {
+              "kind": "field",
+              "name": "_selector",
+              "type": {
+                "text": "String"
+              },
+              "privacy": "private",
+              "default": "''"
             },
             {
               "kind": "method",
-              "name": "__increment"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "title",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Hey there'",
-              "fieldName": "title"
+              "name": "handleSelection"
             },
             {
-              "name": "counter",
-              "type": {
-                "text": "number"
-              },
-              "default": "5",
-              "fieldName": "counter"
+              "kind": "method",
+              "name": "getSelectedText"
+            },
+            {
+              "kind": "method",
+              "name": "getFocusedElement"
+            },
+            {
+              "kind": "method",
+              "name": "trackSelectedText"
             }
           ],
           "superclass": {

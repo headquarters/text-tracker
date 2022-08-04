@@ -75,14 +75,28 @@ export class TextMonitor extends LitElement {
     const el = document.activeElement;
     let text;
 
-    // for a dropdown
+    console.log({ el }, (el as any).value);
+
+    // input field
+    if (el instanceof HTMLInputElement) {
+      text = el.value;
+    }
+
+    // textarea
+    if (el instanceof HTMLTextAreaElement) {
+      text = el.value;
+    }
+
+    // select element
     if (el instanceof HTMLSelectElement) {
       const index = el.selectedIndex;
 
       text = el.children[index].textContent;
-    } else {
-      text = el?.textContent;
     }
+
+    // else {
+    //   text = el?.textContent;
+    // }
     this.requestUpdate();
 
     // eslint-disable-next-line consistent-return
