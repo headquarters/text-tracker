@@ -47,7 +47,7 @@ export class TextMonitor extends LitElement {
     :host {
       box-sizing: border-box;
       padding: 15px;
-      min-width: 300px;
+      min-width: 320px;
       border: 2px solid darkgray;
       box-shadow: gray 2px 2px 8px;
       background-color: white;
@@ -56,11 +56,16 @@ export class TextMonitor extends LitElement {
       top: 30px;
       z-index: 99999;
     }
+
+    code {
+      display: block;
+      max-width: 280px;
+    }
   `;
 
   getSelectedText() {
     if (this._selection && !this._selection.isCollapsed) {
-      return html`<pre>${this._selection?.toString()}</pre>`;
+      return html`<code>${this._selection?.toString()}</code>`;
     }
 
     return html`<em>no text selected, yet</em>`;
@@ -100,7 +105,7 @@ export class TextMonitor extends LitElement {
     this.requestUpdate();
 
     // eslint-disable-next-line consistent-return
-    return html`<pre>${text}</pre>`;
+    return html`<code>${text}</code>`;
   }
 
   trackSelectedText() {
