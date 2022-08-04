@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@medv/finder": "^2.1.0",
+    "firebase": "^9.9.1",
     "lit": "^2.0.2"
   },
   "devDependencies": {

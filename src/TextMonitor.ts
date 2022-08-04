@@ -18,19 +18,19 @@ export class TextMonitor extends LitElement {
     this._selection = null;
     this._selectionParentElement = null;
     this.handleSelection = this.handleSelection.bind(this);
-    this.getFocusedElement = this.getFocusedElement.bind(this);
+    // this.getFocusedElement = this.getFocusedElement.bind(this);
   }
 
   connectedCallback() {
     // eslint-disable-next-line no-unused-expressions
     super.connectedCallback && super.connectedCallback();
     document.addEventListener('selectionchange', this.handleSelection);
-    document.addEventListener('focus', this.getFocusedElement, true);
+    // document.addEventListener('focus', this.getFocusedElement, true);
   }
 
   disconnectedCallback() {
     document.removeEventListener('selectionchange', this.handleSelection);
-    document.removeEventListener('focus', this.getFocusedElement, true);
+    // document.removeEventListener('focus', this.getFocusedElement, true);
     // eslint-disable-next-line no-unused-expressions
     super.disconnectedCallback && super.disconnectedCallback();
   }
@@ -80,8 +80,6 @@ export class TextMonitor extends LitElement {
     const el = document.activeElement;
     let text;
 
-    console.log({ el }, (el as any).value);
-
     // input field
     if (el instanceof HTMLInputElement) {
       text = el.value;
@@ -99,9 +97,6 @@ export class TextMonitor extends LitElement {
       text = el.children[index].textContent;
     }
 
-    // else {
-    //   text = el?.textContent;
-    // }
     this.requestUpdate();
 
     // eslint-disable-next-line consistent-return
@@ -140,7 +135,7 @@ export class TextMonitor extends LitElement {
         </details>
 
         <p>Selected text: ${this.getSelectedText()}</p>
-        <p>Focused element: ${this.getFocusedElement()}</p>
+        <!-- <p>Focused element: </p> -->
 
         <button type="button" @click="${this.trackSelectedText}">Track</button>
       </div>
