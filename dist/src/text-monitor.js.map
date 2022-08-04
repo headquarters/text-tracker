@@ -1,1 +1,0 @@
-{"version":3,"file":"text-monitor.js","sourceRoot":"","sources":["../../src/text-monitor.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,MAAM,kBAAkB,CAAC;AAE/C,MAAM,CAAC,cAAc,CAAC,MAAM,CAAC,cAAc,EAAE,WAAW,CAAC,CAAC","sourcesContent":["import { TextMonitor } from './TextMonitor.js';\n\nwindow.customElements.define('text-monitor', TextMonitor);\n"]}
