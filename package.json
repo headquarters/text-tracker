@@ -17,7 +17,7 @@
     "prepublish": "tsc && npm run analyze",
     "rollup": "rollup -c --configPlugin typescript",
     "bookmarklet": "bookmarklet demo/TextTrackerIIFE.js demo/TextTrackerBookmarklet.js",
-    "replace-bookmarklet": "",
+    "replace-bookmarklet": "contents=$(<demo/TextTrackerBookmarklet.js) && sed -i '' \"s/{{TextTrackerBookmarklet}}/$contents/g\" demo/index.html",
     "lint": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore",
     "format": "eslint --ext .ts,.html . --fix --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",
     "test": "tsc && wtr --coverage",
