@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Track text changes on your favorite websites</title>
+    <title>Demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
   </head>
   <body>
+    <header>
+      <h1>
+        Text Tracker
+      </h1>
+    </header>
     <main>
-      <header>
-        <h1>Text Tracker</h1>
-        <p class="subtitle">Track text changes on your favorite websites</p>
-      </header>
+      <p>
+        Add the bookmarklet to start tracking text changes on websites.
 
-      
+        <a href="javascript:(function()%7B(()%3D%3E%7Bif(document.querySelector(%22text-tracker%22))return%20console.warn(%22%3Ctext-tracker%3E%3C%2Ftext-tracker%3E%20element%20already%20loaded.%22)%2Cnull%3Bconst%20e%3Ddocument.createElement(%22script%22)%3Be.type%3D%22module%22%2Ce.src%3D%22.%2Ftext-tracker-es.js%22%2Ce.onload%3D()%3D%3E%7Bconst%20e%3Ddocument.createElement(%22text-tracker%22)%3Bdocument.body.appendChild(e)%7D%2Cdocument.head.appendChild(e)%7D)()%3B%7D)()">Text Tracker</a>
+      </p>
     </main>
   </body>
 </html>
