@@ -5,10 +5,9 @@
   "main": "text-tracker.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c && npm run bookmarklet && npm run replace-bookmarklet",
+    "build": "rollup -c && npm run bookmarklet && node replace-bookmarklet.js",
     "start": "npm run build && serve ./public",
-    "bookmarklet": "bookmarklet ./src/text-tracker-loader.js ./public/text-tracker-bookmarklet.js",
-    "replace-bookmarklet": "contents=$(<./public/text-tracker-bookmarklet.js) && sed -i '' \"s/\"javascript.*\\(\\)\"/\"$contents\"/g\" ./public/index.html"
+    "bookmarklet": "bookmarklet ./src/text-tracker-loader.js ./public/text-tracker-bookmarklet.js"
   },
   "author": "",
   "license": "ISC",
