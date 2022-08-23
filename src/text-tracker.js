@@ -1,4 +1,6 @@
 import { finder } from "@medv/finder";
+import { getAuth, signInAnonymously, onAuthStateChanged } from "firebase/auth";
+import { app } from "../firebase.config";
 
 const template = document.createElement("template");
 template.innerHTML = `
@@ -58,6 +60,32 @@ class TextTracker extends HTMLElement {
     this._selectedElement = null;
     this._selector = "";
     this.attachShadow({ mode: "open" });
+
+    const auth = getAuth();
+    signInAnonymously(auth)
+      .then((res) => {
+        // Signed in..
+        console.log("signInAnonymously", res);
+        // uid => "YjdwSxeecGOGKTv5b2ESA7sXaev1"
+      })
+      .catch((error) => {
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
+        console.error(error);
+      });
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        const uid = user.uid;
+        console.log("onAuthStateChanged", { user });
+        // ...
+      } else {
+        // User is signed out
+        // ...
+      }
+    });
   }
 
   connectedCallback() {
@@ -111,7 +139,9 @@ class TextTracker extends HTMLElement {
     // Handle text selection
     // Select element => get option's value
     if (this._selectedElement instanceof HTMLSelectElement) {
-      const label = this._selectedElement.children[this._selectedElement.selectedIndex].label;
+      const label =
+        this._selectedElement.children[this._selectedElement.selectedIndex]
+          .label;
       return `<code>${label}: ${this._selectedElement.value}</code>`;
     }
 
